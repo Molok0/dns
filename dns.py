@@ -61,7 +61,7 @@ class DNSServer:
                     self.dns_cache.put_answer(
                         record_key, record_dict[record_key], rr.ttl)
 
-            print(f'Запрос {qname} {qtype} обработан')
+            print(f'Запрос {qname} обработан')
             return dns_response.pack()
         except Exception as e:
             print(f'Ошибка обработки запроса: {e}')
